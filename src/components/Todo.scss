@@ -1,0 +1,30 @@
+@use '../styles/variables' as *;
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-block: 1rem;
+}
+
+.list-item::after {
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid var(--theme-dark-grayblue-800);
+  width: 100%;
+  bottom: 0;
+  opacity: .8;
+}
+
+.complete-btn,
+.delete-btn {
+  all: unset;
+  cursor: pointer;
+  transform: scale(1);
+  padding: 0 1rem;
+}
+
+.delete-btn:hover {
+  transform: scale(1.15);
+}
