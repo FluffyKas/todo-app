@@ -8,8 +8,8 @@ const TodoController = () => {
 
   return ( 
     <main>
-      <CreateTodo setTodos={setTodos} todos={todos} setInputText={setInputText} inputText={inputText}/>
-      <TodoList todos={todos} />
+      <CreateTodo todos={todos} setTodos={setTodos} inputText={inputText} setInputText={setInputText}/>
+      <TodoList todos={todos} setTodos={setTodos} />
     </main>
    );
 }

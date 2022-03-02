@@ -1,5 +1,67 @@
-ul {
-  background: white;
-  margin-top: 1rem;
+@use '../styles/variables' as *;
+
+.todo-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.todo-container {
+  background-color: var(--todo-bg);
   border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.todo-list {
+  color: var(--todo--item-uncompleted);
+}
+
+.list-filters {
+  display: flex;
+  gap: 1rem;
+  display: none;
+
+  @media (min-width: 50rem) {
+    display: block;
+  }
+}
+
+.list-filters-mobile {
+  background-color: var(--todo-bg);
+  border-radius: 5px;
+  color: var(--todo-function-clr);
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: .9rem;
+  font-weight: 700;
+  padding: 1rem 0;
+  
+  @media (min-width: 50rem) {
+    display: none;
+  }
+}
+
+.filter-btn {
+  all: unset;
+}
+
+.list-functions {
+  color: var(--todo-function-clr);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.clear-list-btn {
+  background: none;
+  border: 0;
+  color: var(--todo-function-clr);
+  cursor: pointer;
+}
+
+.completed {
+  color:var(--todo-item-completed);
+  text-decoration: line-through;
 }
