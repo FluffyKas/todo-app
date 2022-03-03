@@ -1,0 +1,7 @@
+@use '../styles/variables' as *;
+
+.drag-and-drop-msg {
+  color: var(--todo-function-clr);
+  margin-top: 2.75rem;
+  text-align: center;
+}
