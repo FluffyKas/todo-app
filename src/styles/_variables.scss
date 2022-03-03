@@ -2,8 +2,8 @@
   
 // PRIMARY COLOURS
 
-$clr-accent: hsl(220, 98%, 61%);
-$gradient: linear-gradient(142deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 60%);
+--clr-accent: hsl(220, 98%, 61%);
+--gradient: linear-gradient(142deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 60%);
 
 // LIGHT THEME
 
@@ -23,26 +23,39 @@ $gradient: linear-gradient(142deg, rgba(87,221,255,1) 0%, rgba(192,88,243,1) 60%
 --theme-dark-grayblue-800: hsl(233, 14%, 35%);
 --theme-dark-grayblue-900: hsl(237, 14%, 26%);
 }
-@media (prefers-color-scheme: dark) {
 
-  :root {
-    --body-bg: var(--theme-dark-darkblue);
-    --todo-bg: var(--theme-dark-desaturated-blue);
-
-    --todo--item-uncompleted: var(--theme-dark-grayblue-100);
-    --todo-item-completed: var(--theme-dark-grayblue-600);
-    --todo-function-clr: var(--theme-dark-grayblue-600);
-  }
-}
+// COLOUR SETTINGS MEDIA QUERIES
 
 @media (prefers-color-scheme: light) {
 
   :root {
+
+    // Body backgrounds
     --body-bg: var(--theme-light-grayblue-100);
+    --bg-img-mobile: url(../images/bg-mobile-light.jpg); 
+    --bg-img-desktop: url(../images/bg-desktop-light.jpg);
+    // Todo list background
     --todo-bg: var(--theme-light-grayblue-100);
     
     --todo-item-uncompleted: var(--theme-light-grayblue-900);
     --todo-item-completed: var(--theme-light-grayblue-200);
     --todo-function-clr: var(--theme-light-grayblue-600);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+  :root {
+
+    // Body backgrounds
+    --body-bg: var(--theme-dark-darkblue);
+    --bg-img-mobile: url(../images/bg-mobile-dark.jpg);
+    --bg-img-desktop: url(../images/bg-desktop-dark.jpg);  
+    // Todo list background
+    --todo-bg: var(--theme-dark-desaturated-blue);
+
+    --todo--item-uncompleted: var(--theme-dark-grayblue-100);
+    --todo-item-completed: var(--theme-dark-grayblue-600);
+    --todo-function-clr: var(--theme-dark-grayblue-600);
   }
 }
