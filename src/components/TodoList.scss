@@ -17,12 +17,11 @@
 }
 
 .list-filters {
-  display: flex;
   gap: 1rem;
   display: none;
 
   @media (min-width: 50rem) {
-    display: block;
+    display: flex;
   }
 }
 
@@ -52,6 +51,7 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 1rem;
+  padding-inline: 1rem;
 }
 
 .clear-list-btn {

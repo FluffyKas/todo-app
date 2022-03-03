@@ -3,18 +3,27 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 2.5rem 0 1rem 0;
-  width: min(90%, 30rem);
+  width: min(90%, 34rem);
   margin: 0 auto;
+
+  @media (min-width: 50rem) {
+    padding: 4.5rem 0 1rem 0;
+  }
 }
 
 h1 {
   color: white;
-  letter-spacing: 10px;
+  letter-spacing: 14px;
   font-size: 1.65rem;
+
+  @media (min-width: 50rem) {
+    font-size: 2.4rem;
+  }
 }
 
 .theme-toggle {
   all: unset;
   color: white;
+  cursor: pointer;
   font-size: 1.5rem;
 }
