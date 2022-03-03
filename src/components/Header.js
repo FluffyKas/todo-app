@@ -1,14 +1,14 @@
 import './Header.scss';
-// import { ReactComponent as LightModeIcon } from '../images/icon-sun.svg';
+import { ReactComponent as LightModeIcon } from '../images/icon-sun.svg';
 import { ReactComponent as DarkModeIcon } from '../images/icon-moon.svg';
-import { useState } from 'react';
 
-const Header = () => {
+const Header = ({ switchTheme, theme }) => {
+  console.log(theme);
     return (
       <header>
         <h1>TODO</h1>
-        <button className="theme-toggle">
-        <DarkModeIcon />
+        <button onClick={switchTheme} className="theme-toggle">
+          {theme === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
         </button>
       </header>
     );
