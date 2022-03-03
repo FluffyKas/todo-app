@@ -3,11 +3,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
-body {
+.app {
   background: var(--bg-img-mobile), var(--body-bg);
   background-repeat: no-repeat;
   background-size: 100vw 30vh;
   font-family: 'Josefin Sans', sans-serif;
+  min-height: 100vh;
 
   @media (min-width: 50rem) {
     background: var(--bg-img-desktop), var(--body-bg);

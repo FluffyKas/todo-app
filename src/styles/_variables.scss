@@ -24,10 +24,6 @@
 --theme-dark-grayblue-900: hsl(237, 14%, 26%);
 }
 
-// COLOUR SETTINGS MEDIA QUERIES
-
-@media (prefers-color-scheme: light) {
-
   :root {
 
     // Body backgrounds
@@ -36,16 +32,13 @@
     --bg-img-desktop: url(../images/bg-desktop-light.jpg);
     // Todo list background
     --todo-bg: var(--theme-light-grayblue-100);
-    
+    // Text colours
     --todo-item-uncompleted: var(--theme-light-grayblue-900);
     --todo-item-completed: var(--theme-light-grayblue-200);
     --todo-function-clr: var(--theme-light-grayblue-600);
   }
-}
 
-@media (prefers-color-scheme: dark) {
-
-  :root.dark-mode {
+  [data-theme='dark'] {
 
     // Body backgrounds
     --body-bg: var(--theme-dark-darkblue);
@@ -53,9 +46,8 @@
     --bg-img-desktop: url(../images/bg-desktop-dark.jpg);  
     // Todo list background
     --todo-bg: var(--theme-dark-desaturated-blue);
-
+    // Text colours
     --todo--item-uncompleted: var(--theme-dark-grayblue-100);
     --todo-item-completed: var(--theme-dark-grayblue-600);
     --todo-function-clr: var(--theme-dark-grayblue-600);
   }
-}
