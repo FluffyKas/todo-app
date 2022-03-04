@@ -1,53 +1,61 @@
 :root {
-  
-// PRIMARY COLOURS
 
---clr-accent: hsl(220, 98%, 61%);
---gradient: linear-gradient(142deg, rgba(87,221,255,1) 15%, rgba(192,88,243,1) 90%);
+  // PRIMARY COLOURS
 
-// LIGHT THEME
+  --clr-accent: hsl(220, 98%, 61%);
+  --gradient: linear-gradient(142deg, rgba(87, 221, 255, 1) 15%, rgba(192, 88, 243, 1) 90%);
 
---theme-light-grayblue-100: hsl(0, 0%, 98%);
---theme-light-grayblue-200: hsl(236, 33%, 92%);
---theme-light-grayblue-300: hsl(233, 11%, 84%);
---theme-light-grayblue-600: hsl(236, 9%, 61%);
---theme-light-grayblue-900: hsl(235, 19%, 35%);
+  // LIGHT THEME COLOURS
 
-// DARK THEME
+  --theme-light-grayblue-100: hsl(0, 0%, 98%);
+  --theme-light-grayblue-200: hsl(236, 33%, 92%);
+  --theme-light-grayblue-300: hsl(233, 11%, 84%);
+  --theme-light-grayblue-600: hsl(236, 9%, 61%);
+  --theme-light-grayblue-900: hsl(235, 19%, 35%);
 
---theme-dark-darkblue: hsl(235, 21%, 11%);
---theme-dark-desaturated-blue: hsl(235, 24%, 19%);
---theme-dark-grayblue-100: hsl(234, 39%, 85%);
---theme-dark-grayblue-200: hsl(236, 33%, 92%);
---theme-dark-grayblue-600: hsl(234, 11%, 52%);
---theme-dark-grayblue-800: hsl(233, 14%, 35%);
---theme-dark-grayblue-900: hsl(237, 14%, 26%);
+  // DARK THEME COLOURS
+
+  --theme-dark-darkblue: hsl(235, 21%, 11%);
+  --theme-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --theme-dark-grayblue-200: hsl(234, 39%, 85%);
+  --theme-dark-grayblue-100: hsl(236, 33%, 92%);
+  --theme-dark-grayblue-600: hsl(234, 11%, 52%);
+  --theme-dark-grayblue-800: hsl(233, 14%, 35%);
+  --theme-dark-grayblue-900: hsl(237, 14%, 26%);
 }
 
-  :root {
+// ASSIGNING LIGHT/DARK THEME VARIABLES
 
-    // Body backgrounds
-    --body-bg: var(--theme-light-grayblue-100);
-    --bg-img-mobile: url(../images/bg-mobile-light.jpg); 
-    --bg-img-desktop: url(../images/bg-desktop-light.jpg);
-    // Todo list background
-    --todo-bg: var(--theme-light-grayblue-100);
-    // Text colours
-    --todo-item-uncompleted: var(--theme-light-grayblue-900);
-    --todo-item-completed: var(--theme-light-grayblue-200);
-    --todo-function-clr: var(--theme-light-grayblue-600);
-  }
+:root {
 
-  [data-theme='dark'] {
+  // Backgrounds
+  --app-bg: var(--theme-light-grayblue-100);
+  --bg-img-mobile: url(../images/bg-mobile-light.jpg);
+  --bg-img-desktop: url(../images/bg-desktop-light.jpg);
 
-    // Body backgrounds
-    --body-bg: var(--theme-dark-darkblue);
-    --bg-img-mobile: url(../images/bg-mobile-dark.jpg);
-    --bg-img-desktop: url(../images/bg-desktop-dark.jpg);  
-    // Todo list background
-    --todo-bg: var(--theme-dark-desaturated-blue);
-    // Text colours
-    --todo--item-uncompleted: var(--theme-dark-grayblue-100);
-    --todo-item-completed: var(--theme-dark-grayblue-600);
-    --todo-function-clr: var(--theme-dark-grayblue-600);
-  }
+  // Todo list background
+  --todo-bg: var(--theme-light-grayblue-100);
+
+  // Text colours
+  --todo-item-incomplete: var(--theme-light-grayblue-100);
+  --todo-item-completed: var(--theme-light-grayblue-200);
+  --todo-function: var(--theme-light-grayblue-600);
+}
+
+[data-theme='dark'] {
+
+  // Backgrounds
+  --app-bg: var(--theme-dark-darkblue);
+  --bg-img-mobile: url(../images/bg-mobile-dark.jpg);
+  --bg-img-desktop: url(../images/bg-desktop-dark.jpg);
+
+  // Todo list background
+  --todo-bg: var(--theme-dark-desaturated-blue);
+  
+  // Text colours
+  --todo-item-incomplete: var(--theme-dark-grayblue-200);
+  --todo-item-completed: var(--theme-dark-grayblue-800);
+  --check-btn: var(--theme-light-grayblue-900);
+  --todo-function: var(--theme-dark-grayblue-600);
+  --todo-function-hover: var(--theme-dark-grayblue-100);
+}
