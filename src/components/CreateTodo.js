@@ -1,10 +1,10 @@
 import './CreateTodo.scss';
 
-const CreateTodo = ({ inputText, setInputText, todos, setTodos }) => {
-  const handleChange = (e) => {
+function CreateTodo ({ inputText, setInputText, todos, setTodos }) {
+  function handleChange (e) {
     setInputText(e.target.value.trimStart());
   }
-  const submitHandler = (e) => {
+  function submitHandler (e) {
     if (e.key === 'Enter') {
       e.preventDefault();
       setTodos([

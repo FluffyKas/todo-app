@@ -2,13 +2,13 @@ import './Todo.scss';
 import { ReactComponent as DeleteIcon } from '../images/icon-cross.svg';
 
 
-const Todo = ({ todo, todos, setTodos }) => {
+function Todo ({ todo, todos, setTodos }) {
 
-  const deleteItem = () => {
+  function deleteItem () {
     setTodos(todos.filter((element) => element.id !== todo.id));
   }
 
-  const markCompleted = () => {
+  function markCompleted () {
     setTodos(todos.map((item) => {
       if (item.id === todo.id) {
         return {

@@ -1,8 +1,45 @@
+@use '../styles/variables' as *;
+
+.create-todo-form {
+  position: relative;
+}
+
 input {
   width: 100%;
   padding: 1rem;
+  padding-left: 4rem;
   border: 0;
   border-radius: 5px;
+  color: var(--todo--item-uncompleted);
   font-size: .8rem;
   background: var(--todo-bg);
+}
+
+input:focus {
+  /* Provide a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 2px dashed var(--todo--item-uncompleted);
+}
+
+input:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+     that do s  upport :focus-visible */
+  outline: none;
+}
+
+input:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 2px dashed var(--todo--item-uncompleted);
+}
+
+.decor-btn {
+  border-radius: 50%;
+  padding: .35rem .3rem;
+  margin-inline: 1.5rem .75rem;
+  position: absolute;
+  background: none;
+  border: 1px solid var(--check-btn);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }

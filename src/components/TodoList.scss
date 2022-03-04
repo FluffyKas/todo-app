@@ -1,4 +1,4 @@
-@use '../styles/variables' as *;
+@use '../styles/variables'as *;
 
 .todo-wrapper {
   display: flex;
@@ -16,42 +16,59 @@
   color: var(--todo--item-uncompleted);
 }
 
+.completed {
+  color: var(--todo-item-completed);
+  text-decoration: line-through;
+}
+
+// TODO LIST FUNCTIONS
+
+.list-functions {
+  color: var(--todo-function);
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+  padding-inline: 1.25rem;
+}
+
 .list-filters {
-  gap: 1rem;
   display: none;
 
   @media (min-width: 50rem) {
     display: flex;
+    gap: 1rem;
   }
+}
+
+.filter-btn {
+  all: unset;
+  color: var(--todo-function);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: .9rem;
+  transition: all .5s ease-in; //PLS WORK!!!
+}
+
+.filter-btn:hover {
+  color: var(--todo-function-hover);
 }
 
 .list-filters-mobile {
   background-color: var(--todo-bg);
   border-radius: 5px;
-  color: var(--todo-function-clr);
+  color: var(--todo-function);
   display: flex;
   justify-content: center;
   gap: 1rem;
   font-size: .9rem;
   font-weight: 700;
   padding: 1rem 0;
-  
+
   @media (min-width: 50rem) {
     display: none;
   }
-}
-
-.filter-btn {
-  all: unset;
-}
-
-.list-functions {
-  color: var(--todo-function-clr);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 1rem;
-  padding-inline: 1rem;
 }
 
 .clear-list-btn {
@@ -59,9 +76,4 @@
   border: 0;
   color: var(--todo-function-clr);
   cursor: pointer;
-}
-
-.completed {
-  color:var(--todo-item-completed);
-  text-decoration: line-through;
 }

@@ -14,15 +14,42 @@
   border-bottom: 1px solid var(--theme-dark-grayblue-800);
   width: 100%;
   bottom: 0;
-  opacity: .8;
+  opacity: .65;
 }
 
-.complete-btn,
+.list-item-text {
+  display: inline;
+  color: var(--todo-item-incomplete);
+  font-size: .8rem;
+}
+
+.list-item-text.completed {
+  color: var(--todo-item-completed);
+  text-decoration: line-through;
+}
+
+.completed-btn,
+.btn-empty,
 .delete-btn {
   all: unset;
   cursor: pointer;
   transform: scale(1);
   padding: 0 1rem;
+}
+
+.check-btn {
+  border-radius: 50%;
+  padding: .35rem .3rem;
+  margin-inline: 1.5rem .75rem;
+}
+
+.btn-empty {
+  background: none;
+  border: 1px solid var(--check-btn);
+}
+
+.completed-btn {
+  background: var(--gradient);
 }
 
 .delete-btn:hover {

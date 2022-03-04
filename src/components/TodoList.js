@@ -2,13 +2,13 @@ import './TodoList.scss';
 
 import Todo from "./Todo";
 
-const TodoList = ({ todos, setTodos, setStatus, filteredTodos }) => {
+function TodoList ({ todos, setTodos, setStatus, filteredTodos })  {
 
-  const deleteCompleted = () => {
+  function deleteCompleted () {
     setTodos(todos.filter(todo => todo.completed === false));
   };
 
-  const statusHandler = (e) => {
+  function statusHandler (e) {
     setStatus(e.target.innerHTML.toLowerCase());
   }
 

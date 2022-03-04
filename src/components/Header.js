@@ -2,7 +2,7 @@ import './Header.scss';
 import { ReactComponent as LightModeIcon } from '../images/icon-sun.svg';
 import { ReactComponent as DarkModeIcon } from '../images/icon-moon.svg';
 
-const Header = ({ switchTheme, theme }) => {
+function Header ({ switchTheme, theme }) {
 
   return (
     <header>
