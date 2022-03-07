@@ -26,7 +26,7 @@ function Todo ({ todo, todos, setTodos }) {
       <span className="item-left">
         {
           todo.completed === false ?
-            <button className="btn-empty check-btn" onClick={markCompleted} aria-label="Mark item as completed.">
+            <button className="btn-empty check-btn" onClick={markCompleted} title="Mark item as completed." aria-label="Mark item as completed.">
               <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="none" stroke-width="2" d="M1 4.304L3.696 7l6-6" /></svg>
             </button> :
             <button className="completed-btn check-btn" aria-label="Mark item as incomplete.">
