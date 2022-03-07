@@ -1,4 +1,5 @@
 import './CreateTodo.scss';
+import { v4 as uuidV4 } from 'uuid';
 
 function CreateTodo ({ inputText, setInputText, todos, setTodos }) {
   function handleChange (e) {
@@ -8,7 +9,7 @@ function CreateTodo ({ inputText, setInputText, todos, setTodos }) {
     if (e.key === 'Enter') {
       e.preventDefault();
       setTodos([
-        ...todos, { text: inputText.trim(), completed: false, id: Math.floor(Math.random() * 1000) }
+        ...todos, { text: inputText.trim(), completed: false, id: uuidV4() }
       ]);
       setInputText('');
     }
