@@ -13,6 +13,7 @@ input {
   color: var(--todo-item-incomplete);
   font-size: clamp(0.8rem, 2vw, 1.1rem);
   background: var(--todo-bg);
+  box-shadow: 0 2px 15px 0 var(--todo-shadow);
 }
 
 input:focus {
@@ -30,6 +31,21 @@ input:focus:not(:focus-visible) {
 input:focus-visible {
   /* for browsers that do support :focus-visible */
   outline: 2px dashed var(--todo--item-uncompleted);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--todo-item-incomplete);
+  opacity: .75;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--todo-item-incomplete);
+  opacity: .75;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--todo-item-incomplete);
+  opacity: .75;
 }
 
 .decor-btn {
