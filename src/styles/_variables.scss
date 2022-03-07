@@ -35,11 +35,14 @@
 
   // Todo list background
   --todo-bg: var(--theme-light-grayblue-100);
+  --todo-shadow: hsla(237, 13%, 71%, 0.215);
 
   // Text colours
-  --todo-item-incomplete: var(--theme-light-grayblue-100);
-  --todo-item-completed: var(--theme-light-grayblue-200);
+  --todo-item-incomplete: var(--theme-light-grayblue-900);
+  --todo-item-completed: var(--theme-light-grayblue-600);
+  --check-btn: var(--theme-light-grayblue-300);
   --todo-function: var(--theme-light-grayblue-600);
+  --todo-function-hover: var(--theme-light-grayblue-900);
 }
 
 [data-theme='dark'] {
@@ -51,6 +54,7 @@
 
   // Todo list background
   --todo-bg: var(--theme-dark-desaturated-blue);
+  --todo-shadow: hsla(250, 19%, 7%, 0.215);
   
   // Text colours
   --todo-item-incomplete: var(--theme-dark-grayblue-200);

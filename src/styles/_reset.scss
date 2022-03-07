@@ -9,7 +9,7 @@
 
 * {
   margin: 0;
-  padding: 0; 
+  padding: 0;
 }
 
 html,
@@ -68,10 +68,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-}
-  
+
   *,
   *::before,
   *::after {
@@ -80,10 +79,11 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
 
 // if using React, etc => details in article
 #root,
 #__next {
   isolation: isolate;
 }
-

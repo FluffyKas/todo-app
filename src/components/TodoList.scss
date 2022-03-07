@@ -9,11 +9,12 @@
 .todo-container {
   background-color: var(--todo-bg);
   border-radius: 5px;
+  box-shadow: 0 2px 15px 0 var(--todo-shadow);
   margin-top: 1rem;
 }
 
 .todo-list {
-  color: var(--todo--item-uncompleted);
+  color: var(--todo-item-incomplete);
 }
 
 .completed {
@@ -25,7 +26,7 @@
 
 .list-functions {
   color: var(--todo-function);
-  font-size: .8rem;
+  font-size: clamp(0.8rem, 2vw, .95rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,8 +48,8 @@
   color: var(--todo-function);
   cursor: pointer;
   font-weight: 700;
-  font-size: .9rem;
-  transition: all .5s ease-in; //PLS WORK!!!
+  font-size: clamp(0.9rem, 2vw, .95rem);
+  transition: all .2s ease-in;
 }
 
 .filter-btn:hover {
@@ -62,7 +63,6 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  font-size: .9rem;
   font-weight: 700;
   padding: 1rem 0;
 
@@ -74,6 +74,10 @@
 .clear-list-btn {
   background: none;
   border: 0;
-  color: var(--todo-function-clr);
+  color: var(--todo-function);
   cursor: pointer;
+
+  &:hover {
+    color: var(--todo-function-hover);
+  }
 }

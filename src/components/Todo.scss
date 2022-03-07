@@ -1,11 +1,17 @@
 @use '../styles/variables' as *;
 
 .list-item {
+  color: var(--todo-item-incomplete);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   padding-block: 1rem;
+}
+
+.list-item.completed {
+  color: var(--todo-item-completed);
+  text-decoration: line-through;
 }
 
 .list-item::after {
@@ -19,13 +25,8 @@
 
 .list-item-text {
   display: inline;
-  color: var(--todo-item-incomplete);
-  font-size: .8rem;
-}
-
-.list-item-text.completed {
-  color: var(--todo-item-completed);
-  text-decoration: line-through;
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
+  letter-spacing: 1px;
 }
 
 .completed-btn,
@@ -40,7 +41,7 @@
 .check-btn {
   border-radius: 50%;
   padding: .35rem .3rem;
-  margin-inline: 1.5rem .75rem;
+  margin-inline: 1.5rem 1.1rem;
 }
 
 .btn-empty {

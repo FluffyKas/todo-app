@@ -10,8 +10,8 @@ input {
   padding-left: 4rem;
   border: 0;
   border-radius: 5px;
-  color: var(--todo--item-uncompleted);
-  font-size: .8rem;
+  color: var(--todo-item-incomplete);
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
   background: var(--todo-bg);
 }
 
@@ -35,11 +35,10 @@ input:focus-visible {
 .decor-btn {
   border-radius: 50%;
   padding: .35rem .3rem;
-  margin-inline: 1.5rem .75rem;
+  margin-left: 1.5rem;
   position: absolute;
   background: none;
   border: 1px solid var(--check-btn);
-  left: 0;
   top: 50%;
   transform: translateY(-50%);
 }
