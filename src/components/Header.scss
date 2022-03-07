@@ -25,4 +25,8 @@ h1 {
 .theme-toggle {
   all: unset;
   cursor: pointer;
+
+  img {
+    width: clamp(1.5rem, 4.5vw, 2rem);
+  }
 }
