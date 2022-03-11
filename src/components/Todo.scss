@@ -26,12 +26,12 @@
 .list-item-text {
   display: inline;
   font-size: clamp(0.8rem, 2vw, 1.1rem);
-  letter-spacing: 1px;
 }
 
 .completed-btn,
 .btn-empty,
-.delete-btn {
+.delete-btn,
+.edit-btn {
   all: unset;
   cursor: pointer;
   transform: scale(1);
