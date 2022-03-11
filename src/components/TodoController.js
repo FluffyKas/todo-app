@@ -8,6 +8,7 @@ function TodoController() {
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState('all');
   const [filteredTodos, setFilteredTodos] = useState([]);
+  const [editTodoText, setEditTodoText] = useState('');
 
   //Saving to local storage (needs rework with npm package)
 
@@ -54,6 +55,8 @@ function TodoController() {
         setStatus={setStatus}
         filteredTodos={filteredTodos}
         setFilteredTodos={setFilteredTodos}
+        editTodoText={editTodoText}
+        setEditTodoText={setEditTodoText}
       />
       <p className="drag-and-drop-msg">Drag and drop to reorder list</p>
     </main>
