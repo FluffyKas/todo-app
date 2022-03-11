@@ -1,4 +1,4 @@
-import { FaEllipsisV, FaRegEdit, FaCheck } from 'react-icons/fa';
+import { FaRegEdit, FaCheck } from 'react-icons/fa';
 import './Todo.scss';
 import deleteIcon from '../images/icon-cross.svg';
 
