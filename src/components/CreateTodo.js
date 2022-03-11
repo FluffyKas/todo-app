@@ -9,7 +9,7 @@ function CreateTodo({ inputText, setInputText, todos, setTodos }) {
     if (e.key === 'Enter') {
       e.preventDefault();
       setTodos([
-        ...todos, { text: inputText.trim(), completed: false, id: uuidV4() }
+        ...todos, { text: inputText.trim(), completed: false, id: uuidV4(), editing: false }
       ]);
       setInputText('');
     }
