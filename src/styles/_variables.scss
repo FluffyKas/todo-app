@@ -43,6 +43,10 @@
   --check-btn: var(--theme-light-grayblue-300);
   --todo-function: var(--theme-light-grayblue-600);
   --todo-function-hover: var(--theme-light-grayblue-900);
+
+  //Other
+  --focus-clr: var(--theme-light-grayblue-100);
+  --focus-clr-drk: var(--clr-accent);
 }
 
 [data-theme='dark'] {
@@ -62,4 +66,7 @@
   --check-btn: var(--theme-light-grayblue-900);
   --todo-function: var(--theme-dark-grayblue-600);
   --todo-function-hover: var(--theme-dark-grayblue-100);
+
+  //Other
+  --focus-clr: var(--theme-dark-grayblue-200);
 }

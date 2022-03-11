@@ -17,10 +17,17 @@ function CreateTodo({ inputText, setInputText, todos, setTodos }) {
 
   return (
     <form className="create-todo-form">
-      <button className="decor-btn" aria-label="Mark item as completed.">
+      <div className="decor-btn" disabled="true" aria-hidden="true">
         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="none" strokeWidth="2" d="M1 4.304L3.696 7l6-6" /></svg>
-      </button>
-      <input type="text" onChange={handleChange} onKeyPress={submitHandler} value={inputText} placeholder="Create a new todo..." />
+      </div>
+      <input
+        type="text"
+        onChange={handleChange}
+        onKeyPress={submitHandler}
+        className="create-todo-input"
+        value={inputText}
+        placeholder="Create a new todo..."
+      />
     </form>
   );
 }
