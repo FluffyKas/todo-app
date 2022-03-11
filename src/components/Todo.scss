@@ -28,20 +28,16 @@
   font-size: clamp(0.8rem, 2vw, 1.1rem);
 }
 
-.completed-btn,
-.btn-empty,
-.delete-btn,
-.edit-btn {
+.btn {
   all: unset;
   cursor: pointer;
   transform: scale(1);
-  padding: 0 1rem;
 }
 
 .check-btn {
   border-radius: 50%;
   padding: .35rem .3rem;
-  margin-inline: 1.5rem 1.1rem;
+  margin-right: 1.5rem;
 }
 
 .btn-empty {
@@ -51,8 +47,41 @@
 
 .completed-btn {
   background: var(--gradient);
+  padding: 0 1rem;
 }
 
-.delete-btn:hover {
-  transform: scale(1.15);
+.delete-icon,
+.edit-icon {
+  fill: var(--check-btn);
+}
+
+.item-left {
+  margin-left: 1.5rem;
+}
+
+.edit-icon {
+  font-size: 1.4rem;
+}
+
+.item-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 1.5rem;
+  gap: .5rem;
+}
+
+// EDIT SURFACE
+
+.edit-surface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 1rem;
+
+  .edit-input {
+    padding: 0;
+    padding-left: 4rem;
+  }
 }
