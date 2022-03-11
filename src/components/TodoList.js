@@ -2,13 +2,13 @@ import './TodoList.scss';
 
 import Todo from "./Todo";
 
-function TodoList ({ todos, setTodos, setStatus, filteredTodos })  {
+function TodoList({ todos, setTodos, setStatus, filteredTodos, editTodoText, setEditTodoText }) {
 
-  function deleteCompleted () {
+  function deleteCompleted() {
     setTodos(todos.filter(todo => todo.completed === false));
   };
 
-  function statusHandler (e) {
+  function statusHandler(e) {
     setStatus(e.target.innerHTML.toLowerCase());
   }
 
@@ -19,7 +19,8 @@ function TodoList ({ todos, setTodos, setStatus, filteredTodos })  {
       <div className="todo-container">
         <ul className="todo-list">
           {filteredTodos !== '' && filteredTodos.map((todo) => {
-            return <Todo key={todo.id} todo={todo} todos={todos} setTodos={setTodos} />
+            return <Todo key={todo.id} todo={todo} todos={todos} setTodos={setTodos} editTodoText={editTodoText}
+              setEditTodoText={setEditTodoText} />
           })
           }
         </ul>
