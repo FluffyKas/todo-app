@@ -6,7 +6,7 @@ function CreateTodo({ inputText, setInputText, todos, setTodos }) {
     setInputText(e.target.value.trimStart());
   }
   function submitHandler(e) {
-    if (e.key === 'Enter') {
+    if (inputText && e.key === 'Enter') {
       e.preventDefault();
       setTodos([
         ...todos, { text: inputText.trim(), completed: false, id: uuidV4(), editing: false }
@@ -17,7 +17,7 @@ function CreateTodo({ inputText, setInputText, todos, setTodos }) {
 
   return (
     <form className="create-todo-form">
-      <div className="decor-btn" disabled="true" aria-hidden="true">
+      <div className="decor-btn" disabled={true} aria-hidden="true">
         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="none" strokeWidth="2" d="M1 4.304L3.696 7l6-6" /></svg>
       </div>
       <input
