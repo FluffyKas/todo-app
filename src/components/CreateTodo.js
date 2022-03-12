@@ -1,7 +1,7 @@
 import './CreateTodo.scss';
 import { v4 as uuidV4 } from 'uuid';
 
-function CreateTodo({ inputText, setInputText, todos, setTodos }) {
+const CreateTodo = ({ inputText, setInputText, todos, setTodos }) => {
   function handleChange(e) {
     setInputText(e.target.value.trimStart());
   }

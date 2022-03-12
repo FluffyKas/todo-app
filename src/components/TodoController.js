@@ -1,11 +1,20 @@
 import { useState, useEffect } from 'react';
 import CreateTodo from './CreateTodo';
+import { v4 as uuidV4 } from 'uuid';
 import TodoList from './TodoList';
 import './TodoController.scss';
 
-function TodoController() {
+const TodoController = () => {
+
+  const initialTodos = [
+    { text: 'Pick up groceries', completed: false, id: uuidV4(), editing: false },
+    { text: 'Go for a jog', completed: false, id: uuidV4(), editing: false },
+    { text: '10 minutes meditation', completed: false, id: uuidV4(), editing: false },
+    { text: 'Read for an hour', completed: false, id: uuidV4(), editing: false }
+  ]
+
   const [inputText, setInputText] = useState('');
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(initialTodos);
   const [status, setStatus] = useState('all');
   const [filteredTodos, setFilteredTodos] = useState([]);
   const [editTodoText, setEditTodoText] = useState('');
