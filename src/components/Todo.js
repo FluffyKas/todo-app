@@ -42,7 +42,7 @@ function Todo({ todo, todos, setTodos, editTodoText, setEditTodoText }) {
   function updateTodo(e) {
     e.preventDefault();
     setTodos(todos.map((item) => {
-      if (item.id === todo.id) {
+      if (editTodoText && item.id === todo.id) {
         return {
           ...item,
           text: editTodoText.trim(),
@@ -56,14 +56,14 @@ function Todo({ todo, todos, setTodos, editTodoText, setEditTodoText }) {
 
   return (
 
-    <li className={`list-item ${todo.completed ? "completed" : ""}`}>
+    <li className={`list-item ${todo.completed ? "completed" : ""} ${todo.editing ? "edit-style" : ""}`}>
 
       {todo.editing === true ?
         <form className="edit-surface">
-          <button className="decor-btn btn" aria-label="Mark item as completed.">
+          <div className="decor-btn" disabled={true} aria-hidden="true">
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="none" strokeWidth="2" d="M1 4.304L3.696 7l6-6" /></svg>
-          </button>
-          <input onChange={editTodoValue} className="edit-input"></input>
+          </div>
+          <input onChange={editTodoValue} className={`edit-input ${todo.editing ? "edit-style" : ""}`} placeholder={todo.text}></input>
           <button onClick={updateTodo} className="submit-btn btn">
             <FaCheck className="submit-icon" />
           </button>

@@ -2,8 +2,9 @@ import './TodoList.scss';
 
 import Todo from "./Todo";
 
-function TodoList({ todos, setTodos, setStatus, filteredTodos, editTodoText, setEditTodoText }) {
+function TodoList({ todos, setTodos, setStatus, filteredTodos, editTodoText, setEditTodoText, status }) {
 
+  console.log(status);
   function deleteCompleted() {
     setTodos(todos.filter(todo => todo.completed === false));
   };
@@ -30,13 +31,13 @@ function TodoList({ todos, setTodos, setStatus, filteredTodos, editTodoText, set
           <p className="list-item-count">{filteredTodos.length} items left</p>
           <ul className="list-filters">
             <li>
-              <button onClick={statusHandler} className="filter-btn filter-all">All</button>
+              <button onClick={statusHandler} className={`filter-btn filter-all ${status === 'all' ? "active-filter" : ""}`}>All</button>
             </li>
             <li>
-              <button onClick={statusHandler} className="filter-btn filter-active">Active</button>
+              <button onClick={statusHandler} className={`filter-btn filter-active ${status === 'active' ? "active-filter" : ""}`}>Active</button>
             </li>
             <li>
-              <button onClick={statusHandler} className="filter-btn filter-completed">Completed</button>
+              <button onClick={statusHandler} className={`filter-btn filter-completed ${status === 'completed' ? "active-filter" : ""}`}>Completed</button>
             </li>
           </ul>
           <button className="clear-list-btn" onClick={deleteCompleted}>Clear completed</button>
@@ -47,16 +48,16 @@ function TodoList({ todos, setTodos, setStatus, filteredTodos, editTodoText, set
       {/* FILTER MENU FOR MOBILE */}
       <ul className="list-filters-mobile">
         <li>
-          <button onClick={statusHandler} className="filter-btn filter-all">All</button>
+          <button onClick={statusHandler} className={`filter-btn filter-all ${status === 'all' ? "active-filter" : ""}`}>All</button>
         </li>
         <li>
-          <button onClick={statusHandler} className="filter-btn filter-active">Active</button>
+          <button onClick={statusHandler} className={`filter-btn filter-active ${status === 'active' ? "active-filter" : ""}`}>Active</button>
         </li>
         <li>
-          <button onClick={statusHandler} className="filter-btn filter-completed">Completed</button>
+          <button onClick={statusHandler} className={`filter-btn filter-completed ${status === 'completed' ? "active-filter" : ""}`}>Completed</button>
         </li>
       </ul>
-    </div>
+    </div >
   );
 }
 

@@ -1,5 +1,7 @@
 @use '../styles/variables' as *;
 
+// GENERAL
+
 .list-item {
   color: var(--todo-item-incomplete);
   display: flex;
@@ -23,15 +25,21 @@
   opacity: .65;
 }
 
-.list-item-text {
-  display: inline;
-  font-size: clamp(0.8rem, 2vw, 1.1rem);
-}
-
 .btn {
   all: unset;
   cursor: pointer;
   transform: scale(1);
+}
+
+// ITEM LEFT SIDE
+
+.item-left {
+  margin-left: 1.5rem;
+}
+
+.list-item-text {
+  display: inline;
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
 }
 
 .check-btn {
@@ -47,21 +55,9 @@
 
 .completed-btn {
   background: var(--gradient);
-  padding: 0 1rem;
 }
 
-.delete-icon,
-.edit-icon {
-  fill: var(--check-btn);
-}
-
-.item-left {
-  margin-left: 1.5rem;
-}
-
-.edit-icon {
-  font-size: 1.4rem;
-}
+// ITEM RIGHT SIDE
 
 .item-right {
   display: flex;
@@ -69,6 +65,15 @@
   justify-content: space-between;
   margin-right: 1.5rem;
   gap: .5rem;
+}
+
+.delete-icon,
+.edit-icon {
+  fill: var(--check-btn);
+}
+
+.edit-icon {
+  font-size: 1.4rem;
 }
 
 // EDIT SURFACE
@@ -79,9 +84,60 @@
   justify-content: space-between;
   width: 100%;
   padding-right: 1rem;
+}
 
-  .edit-input {
-    padding: 0;
-    padding-left: 4rem;
-  }
+// .edit-style {
+//   background: hsla(0, 0%, 23%, .5) !important;
+// }
+
+.edit-input {
+  all: unset;
+  width: 100%;
+  padding-left: 4rem;
+  border: 0;
+  color: var(--todo-item-incomplete);
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
+}
+
+.edit-input:focus {
+  /* Provide a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 2px dashed var(--focus-clr);
+}
+
+.edit-input:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+     that do s  upport :focus-visible */
+  outline: none;
+}
+
+.edit-input:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 2px dashed var(--focus-clr);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--todo-item-incomplete);
+  opacity: .75;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--todo-item-incomplete);
+  opacity: .75;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--todo-item-incomplete);
+  opacity: .75;
+}
+
+.decor-btn {
+  border-radius: 50%;
+  padding: .35rem .3rem;
+  margin-left: 1.5rem;
+  position: absolute;
+  background: none;
+  border: 1px solid var(--check-btn);
+  top: 50%;
+  transform: translateY(-50%);
 }
