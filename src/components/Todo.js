@@ -64,7 +64,7 @@ function Todo({ todo, todos, setTodos, editTodoText, setEditTodoText }) {
             <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="none" strokeWidth="2" d="M1 4.304L3.696 7l6-6" /></svg>
           </div>
           <input onChange={editTodoValue} className={`edit-input ${todo.editing ? "edit-style" : ""}`} placeholder={todo.text}></input>
-          <button onClick={updateTodo} className="submit-btn btn">
+          <button onClick={updateTodo} className="submit-btn btn" aria-label="Submit changes.">
             <FaCheck className="submit-icon" />
           </button>
         </form> :
@@ -82,7 +82,7 @@ function Todo({ todo, todos, setTodos, editTodoText, setEditTodoText }) {
             <p className="list-item-text">{todo.text}</p>
           </div>
           <div className="item-right">
-            <button className="edit-btn btn" onClick={editItem}>
+            <button className="edit-btn btn" onClick={editItem} aria-label="Edit item.">
               <FaRegEdit className="edit-icon" />
             </button>
             <button className="delete-btn btn" onClick={deleteItem} aria-label="Delete item.">
